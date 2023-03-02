@@ -8,6 +8,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
+      {/* // not sure if we need TailwindProvider */}
       <TailwindProvider>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
