@@ -9,6 +9,7 @@ import {
 } from "react-native-heroicons/outline";
 import {TextInput} from "react-native";
 import Categories from "../components/categories";
+import {FeaturedRow} from "../components/FeaturedRow";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -61,7 +62,26 @@ export default function HomeScreen() {
         {/* Categories */}
         <Categories />
 
-        {/* Featured Rows */}
+        {/* Featured */}
+        <FeaturedRow
+          id="123"
+          title="Featured "
+          description="Paid placemnts from out partmers"
+        />
+
+        {/* Tasty Discounts */}
+        <FeaturedRow
+          id="1234"
+          title="Tasty Discounts "
+          description="Paid placemnts from out partmers"
+        />
+
+        {/* Offers near you */}
+        <FeaturedRow
+          id="12345"
+          title="Offers near you! "
+          description="Paid placemnts from out partmers"
+        />
       </ScrollView>
     </SafeAreaView>
   );
