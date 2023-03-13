@@ -2,6 +2,7 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import {TailwindProvider} from "tailwindcss-react-native";
+import "react-native-url-polyfill/auto";
 
 const Stack = createNativeStackNavigator();
 
