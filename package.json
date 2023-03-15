@@ -20,6 +20,7 @@
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-currency-format": "^1.1.0",
+    "react-currency-formatter": "^1.1.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.3",
     "react-native-heroicons": "^3.2.0",
