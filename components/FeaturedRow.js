@@ -16,7 +16,10 @@ export const FeaturedRow = ({id, title, description}) => {
         ...,
         restaurants[] -> {
           ...,
-          dishes[] ->
+          dishes[] ->,
+          type-> {
+            name
+          }
         }
       }[0]
     `,
@@ -26,6 +29,8 @@ export const FeaturedRow = ({id, title, description}) => {
         setRestaurants(data?.restaurants);
       });
   }, [id]);
+
+  // console.log(restaurants);
 
   return (
     <View>
@@ -54,11 +59,11 @@ export const FeaturedRow = ({id, title, description}) => {
             id={restaurants._id}
             imgUrl={restaurants.image}
             address={restaurants.address}
-            title={restaurants.string}
+            title={restaurants.name}
             dishes={restaurants.dishes}
             rating={restaurants.rating}
             short_description={restaurants.short_description}
-            genre={restaurants.string}
+            genre={restaurants.type?.name}
             long={restaurants.long}
             lat={restaurants.lat}
           />
