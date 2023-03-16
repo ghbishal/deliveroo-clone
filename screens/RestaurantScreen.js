@@ -1,5 +1,5 @@
 import {View, Text, ScrollView, Image, TouchableOpacity} from "react-native";
-import React from "react";
+import React, {useEffect} from "react";
 import {useNavigation, useRoute} from "@react-navigation/native";
 import {urlFor} from "../sanity";
 import {
@@ -11,9 +11,12 @@ import {
 import {QuestionMarkCircleIcon} from "react-native-heroicons/outline";
 import {DishRow} from "../components/DishRow";
 import {BasketIcon} from "../components/BasketIcon";
+import {useDispatch} from "react-redux";
+import {setRestaurant} from "../features/restaurantSlice";
 
 export const RestaurantScreen = () => {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
   const {
     params: {
@@ -30,6 +33,23 @@ export const RestaurantScreen = () => {
     },
   } = useRoute();
 
+  // capturing all the restaurant in global store
+  useEffect(() => {
+    dispatch(
+      setRestaurant({
+        id,
+        imgUrl,
+        title,
+        rating,
+        genre,
+        address,
+        short_description,
+        dishes,
+        long,
+        lat,
+      })
+    );
+  }, [dispatch]);
   return (
     <>
       <BasketIcon />
