@@ -1,5 +1,5 @@
 import {View, Text, ScrollView, Image, TouchableOpacity} from "react-native";
-import React, {useLayoutEffect} from "react";
+import React from "react";
 import {useNavigation, useRoute} from "@react-navigation/native";
 import {urlFor} from "../sanity";
 import {
@@ -29,12 +29,6 @@ export const RestaurantScreen = () => {
       lat,
     },
   } = useRoute();
-
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerShown: false,
-    });
-  }, []);
 
   return (
     <>

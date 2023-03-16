@@ -1,5 +1,5 @@
 import {View, Text, SafeAreaView, Image, ScrollView} from "react-native";
-import React, {useLayoutEffect, useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import {useNavigation} from "@react-navigation/core";
 import {
   UserIcon,
@@ -15,13 +15,6 @@ import {client} from "../sanity";
 export default function HomeScreen() {
   const navigation = useNavigation();
   const [featuredCategories, setFeaturedCategories] = useState([]);
-
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      // how to know where are the options like headerShown
-      headerShown: false,
-    });
-  }, []);
 
   useEffect(() => {
     // this is sanityClient from ./client
