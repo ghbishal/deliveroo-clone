@@ -46,7 +46,7 @@ export const DishRow = ({id, name, description, price, image}) => {
 
           <View>
             <Image
-              style={{borderWidth: 1, borderColor: "F3F3F4"}}
+              style={{borderWidth: 1, borderColor: "#F3F3F4"}}
               source={{uri: urlFor(image).url()}}
               className="h-20 w-20 bg-gray-300 p-4"
             />
