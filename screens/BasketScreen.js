@@ -28,6 +28,10 @@ export const BasketScreen = () => {
 
   const dispatch = useDispatch();
 
+  const handlePressGoPreparingOrder = () => {
+    navigation.navigate("PreparingOrder");
+  };
+
   // created object by the key. If the key exists push the items into the key
   useMemo(() => {
     const groupedItems = items.reduce((results, item) => {
@@ -122,7 +126,7 @@ export const BasketScreen = () => {
           </View>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate("PreparingOrder")}
+            onPress={handlePressGoPreparingOrder}
             className="rounded-lg bg-[#00CCBB] p-4"
           >
             <Text className="text-center text-white text-lg font-bold">
